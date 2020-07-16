@@ -5,7 +5,7 @@ class CreateKids < ActiveRecord::Migration
       t.date :birthday
       t.integer :weight
       t.integer :height
-
+      t.string :parent_name
       t.timestamps null: false
     end
   end
