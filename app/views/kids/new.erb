@@ -1,10 +1,59 @@
 <h1>Welcome! </h1>
  <h3>Please enter in your child's information below, to create their Milestone Profile!</h3>
- <body>
-     <form action="/milestones" method="post">
-     <input type="text" name="user[kid][child_name]" placeholder="Child's Name" id="child_name">
-     <input type="date" name="user[kid][birthday]" id="birthday">
-     <input type="integer" name="user[kid][weight]" placeholder="weight" id="weight">
+ 
+     <form action="/kids" method="post">
+     <br>
+     <div>
+     <label for="child_first_name">Child's Name:</label>
+     <input type="text" name="kid[child_fname]" placeholder="First Name" id="child_fname">
+     <input type="text" name="kid[child_mname]" placeholder="Middle Name" id="child_mname">
+     <input type="text" name="kid[child_lname]" placeholder="Last Name" id="child_lname"> 
+     <label for="suffix">Suffix:</label>
+        <select id="suffix">
+            <option value="jr">Jr.</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="n/a">n/a</option>
+        </select>
+        <br>
+        <br>
+     <label for="date">Date of Birth:</label>
+     <input type="date" name="kid[birthday]" id="birthday"><br>
+    <br>
+     <label for="weight_lbs">Weight:</label>
+     <input type="integer" name="kid[weight_lbs]" placeholder="lbs" id="weight_lbs">
+     <input type="integer" name="kid[weight_oz]" placeholder="oz" id="weight_oz"><br>
+    <br>
+     <label for="height">Height:</label>
+     <input type="text" name="kid[height]" placeholder="in" id="height"><br>
+    <br>
+     <label for="parent1_name"> Parent's Name:</label>
+     <input type="text" name="kid[parent1_fname]" placeholder="First Name" id="parent1_fname">
+     <input type="text" name="kid[parent1_lname]" placeholder="Last Name" id="parent1_lname">
+      <label for="suffix">Suffix:</label>
+        <select id="suffix">
+            <option value="sr">Sr.</option>
+            <option value="jr">Jr.</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="n/a">n/a</option>
+        </select>
+     <br>
+     <br>
+    <label for="parent2_name">Parent's Name</label>
+     <input type="text" name="kid[parent2_fname]" placeholder="First Name" id="parent2_fname">
+     <input type="text" name="kid[parent2_lname]" placeholder="Last Name" id="parent2_lname"> 
+         <label for="suffix">Suffix:</label>
+            <select id="suffix">
+            <option value="sr">Sr.</option>
+            <option value="jr">Jr.</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="n/a">n/a</option>
+        </select>
+     <br>
+    <br>
+     <input type="submit" value="Create Child">
+     </div>
      </form>
- </body>
-
+  

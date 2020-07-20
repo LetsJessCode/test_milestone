@@ -6,11 +6,11 @@ class UserController < ApplicationController
       
       post "/signup" do
         @user = User.new(params[:user])
-        if user.empty?
+        if @user.empty?
             redirect "/incomplete"
 
         else 
-            user.save
+            @user.save
             session[:user_id] = @user.id
             redirect "kids/new"  
         end

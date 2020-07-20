@@ -1,0 +1,6 @@
+<h1>Childs Index List</h1>
+<hr>
+    <% @kids.each do |kid| %>
+        <h3><a href="/kids/<%= kid.id %>"><%= kid.child_fname %>
+        </h3></a>
+<% end %>

@@ -9,4 +9,5 @@ use Rack::MethodOverride
 use UserController
 use SessionsController
 use KidsController
+use MilestonesController
 run ApplicationController

@@ -1,6 +1,4 @@
-require 'bcrypt'
 class User < ActiveRecord::Base
-    include BCrypt
     has_many :kids
 
     has_many :milestones, through: :kids

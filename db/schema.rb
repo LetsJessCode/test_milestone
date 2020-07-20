@@ -14,13 +14,19 @@
 ActiveRecord::Schema.define(version: 20200714182237) do
 
   create_table "kids", force: :cascade do |t|
-    t.string   "child_name"
+    t.string   "child_fname"
+    t.string   "child_mname"
+    t.string   "child_lname"
     t.date     "birthday"
-    t.integer  "weight"
+    t.integer  "weight_lbs"
+    t.integer  "weight_oz"
     t.integer  "height"
-    t.string   "parent_name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "parent1_fname"
+    t.string   "parent1_lname"
+    t.string   "parent2_fname"
+    t.string   "parent2_lname"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "milestones", force: :cascade do |t|
