@@ -1,16 +1,16 @@
-class SessionsController < ApplicationController
+class SessionsController < ApplicationController 
     get '/login' do 
-        erb :login
+        erb :'sessions/new'
     end
 
     post '/login' do
-        @user = User.find_by_username(params[:user][:username])
-        if @user && @user.authenticate(params[:user][:password])
-            session[:user_id] = @user.id
-            redirect 'milestones/user[:id]'
-        else
-            redirect 'incomplete'
-        end
+      @user = User.find_by_username(params[:user][:username])
+         if @user && @user.authenticate(params[:user][:password])
+           session[:user_id] = @user.id
+           redirect '/kids'
+         else
+           erb :'sessions/new'
+      end
     end
     
     get '/logout' do
@@ -18,3 +18,4 @@ class SessionsController < ApplicationController
         redirect '/'
     end
 end
+

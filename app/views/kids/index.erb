@@ -1,6 +1,16 @@
-<h1>Childs Index List</h1>
+<h1> <%= current_user.username %>'s Homepage </h1>
 <hr>
+<h2>Please select a child's name or select <a href="/kids/new"> New </a> to add a child's name. </h2>
+<br>
+<br>
     <% @kids.each do |kid| %>
         <h3><a href="/kids/<%= kid.id %>"><%= kid.child_fname %>
         </h3></a>
 <% end %>
+
+<%# <div>
+  <form action="kids/new">method="post">
+    <input type="submit" value="New">
+ 
+  </form>
+</div> %>

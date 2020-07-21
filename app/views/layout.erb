@@ -14,20 +14,18 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
-
+  <div class="wrapper"> 
 
     <nav>
       <ul>
-        <% unless logged_in? %>
-        <li><a href="/signup">- New Account</a>
-         <li><a href="/login">- Login</a></li>     
-         <% else %>
-         <li><%= current_user.username %></li>
-         <li><a href="/logout">Logout</a></li>
-         <% end %>
-        </li>
+          <% unless logged_in? %>
+        <li><a href="/signup">New Account</a></li>       
+        <li><a href="/login">Login</a></li>
+          <% else %>
+        <li><%= current_user.username %></li>
+        <li><a href="/logout">Logout</a></li>
+        <% end %>
       </ul>
-    
     </nav>
 
         <%= yield %>

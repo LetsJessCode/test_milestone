@@ -1,0 +1,58 @@
+<h1> Edit <%= @kid.child_fname %>'s Profile </h1>
+
+<form action="/kids/<%= @kid.id %>" method="post">
+<input type="hidden" name="_method" value="patch">
+     <br>
+     <div>
+     <label for="child_first_name">Child's Name:</label>
+     <input type="text" name="kid[child_fname]" placeholder="First Name" id="child_fname" value="<%= @kid.child_fname %>">
+     <input type="text" name="kid[child_mname]" placeholder="Middle Name" id="child_mname" value="<%= @kid.child_mname %>">
+     <input type="text" name="kid[child_lname]" placeholder="Last Name" id="child_lname" value="<%= @kid.child_lname %>"> 
+     <label for="suffix">Suffix:</label>
+        <select id="suffix">
+            <option value="jr">Jr.</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="n/a">n/a</option>
+        </select>
+        <br>
+        <br>
+     <label for="date">Date of Birth:</label>
+     <input type="date" name="kid[birthday]" id="birthday" value="<%= @kid.birthday %>"><br>
+    <br>
+     <label for="weight_lbs">Weight:</label>
+     <input type="integer" name="kid[weight_lbs]" placeholder="lbs" id="weight_lbs" value="<%= @kid.weight_lbs %>">
+     <input type="integer" name="kid[weight_oz]" placeholder="oz" id="weight_oz" value="<%= @kid.weight_oz %>"><br>
+    <br>
+     <label for="height">Height:</label>
+     <input type="text" name="kid[height]" value="<%= @kid.height %>" id="height"><br>
+    <br>
+     <label for="parent1_name"> Parent's Name:</label>
+     <input type="text" name="kid[parent1_fname]" value="<%= @kid.parent1_fname %>" id="parent1_fname">
+     <input type="text" name="kid[parent1_lname]" value="<%= @kid.parent1_lname %>" id="parent1_lname">
+      <label for="suffix">Suffix:</label>
+        <select id="suffix">
+            <option value="sr">Sr.</option>
+            <option value="jr">Jr.</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="n/a">n/a</option>
+        </select>
+     <br>
+     <br>
+    <label for="parent2_name">Parent's Name</label>
+     <input type="text" name="kid[parent2_fname]" value="<%= @kid.parent2_fname %>" id="parent2_fname">
+     <input type="text" name="kid[parent2_lname]" value="<%= @kid.parent2_lname %>" id="parent2_lname"> 
+         <label for="suffix">Suffix:</label>
+            <select id="suffix">
+            <option value="sr">Sr.</option>
+            <option value="jr">Jr.</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="n/a">n/a</option>
+        </select>
+     <br>
+    <br>
+     <input type="submit" value="Update Child">
+     </div>
+</form>
